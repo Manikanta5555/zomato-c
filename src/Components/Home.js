@@ -21,7 +21,7 @@ class Home extends React.Component
         axios(
             {
                 method: 'GET',
-                url: 'http://localhost:2020/api/citylist',
+                url: 'https://backend-this.herokuapp.com/',
                 headers: {'Content-Type' : 'application/json' }
             }).then(response => this.setState( { location : response.data.citylist } )).catch()
 
@@ -29,7 +29,7 @@ class Home extends React.Component
         axios(
             {
                 method: 'GET',
-                url: 'http://localhost:2020/api/mealTypes',
+                url: 'https://backend-this.herokuapp.com/',
                 headers: {'Content-Type' : 'application/json' }
             }).then(response => this.setState( { mealTypes : response.data.mealtypes } )).catch()
     }
