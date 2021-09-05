@@ -21,7 +21,7 @@ class Wallpaper extends React.Component
 
         axios({
             method: 'GET',
-            url: `http://localhost:2020/api/resturantbylocation/${locationId}`,
+            url: `https://backend-this.herokuapp.com/`,
             headers: { 'Content-Type': 'application/json' }
         })
             .then(response => this.setState({ restaurants: response.data.resturant }))
