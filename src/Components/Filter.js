@@ -41,14 +41,14 @@ class Filter extends React.Component
         
         axios({
             method : 'POST',
-            url : 'http://localhost:2020/api/filter',
+            url : 'https://backend-this.herokuapp.com/',
             headers : { 'Content-Type' : 'application/json' },
             data : obj
         }).then(response => this.setState({resturants : response.data.resturant, location,mealTypeId})).catch()
 
         axios({
                 method: 'GET',
-                url: 'http://localhost:2020/api/citylist',
+                url:  'https://backend-this.herokuapp.com/',
                 headers: {'Content-Type' : 'application/json' }
             }).then(response => this.setState( { locations : response.data.citylist } )).catch()
     }
@@ -66,7 +66,7 @@ class Filter extends React.Component
         };
         axios({
             method : 'POST',
-            url : 'http://localhost:2020/api/filter',
+            url :  'https://backend-this.herokuapp.com/',
             headers : { 'Content-Type' : 'application/json' },
             data : obj
         }).then(response => this.setState({resturants : response.data.resturant,sort})).catch()
@@ -85,7 +85,7 @@ class Filter extends React.Component
         };
         axios({
             method : 'POST',
-            url : 'http://localhost:2020/api/filter',
+            url : 'https://backend-this.herokuapp.com/',
             headers : { 'Content-Type' : 'application/json' },
             data : obj
         }).then(response => this.setState({resturants : response.data.resturant,lcost,hcost})).catch()
@@ -104,7 +104,7 @@ class Filter extends React.Component
         };
         axios({
             method : 'POST',
-            url : 'http://localhost:2020/api/filter',
+            url :  'https://backend-this.herokuapp.com/',
             headers : { 'Content-Type' : 'application/json' },
             data : obj
         }).then(response => this.setState({resturants : response.data.resturant,location})).catch()
@@ -125,7 +125,7 @@ class Filter extends React.Component
         };
         axios({
             method : 'POST',
-            url : 'http://localhost:2020/api/filter',
+            url :  'https://backend-this.herokuapp.com/',
             headers : { 'Content-Type' : 'application/json' },
             data : obj
         }).then(response => this.setState({resturants : response.data.resturant,pagination})).catch()
