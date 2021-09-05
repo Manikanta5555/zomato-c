@@ -120,7 +120,7 @@ class Header extends React.Component
           if (this.state.createModalIsOpen && value == false) {
             axios({
               method: 'POST',
-              url: "http://localhost:2020/api/createUser",
+              url:  "https://backend-this.herokuapp.com/",
               headers: { "Content-type": "application/json" },
               data: inputObj,
             })
@@ -155,7 +155,7 @@ class Header extends React.Component
       };
         axios({
           method: 'POST',
-          url: `http://localhost:2020/api/login`,
+          url: `https://backend-this.herokuapp.com/`,
           headers: { "Content-type": "application/json" },
           data : obj
         })
