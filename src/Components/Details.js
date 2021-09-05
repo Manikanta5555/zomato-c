@@ -68,7 +68,7 @@ class Details extends React.Component
 
         axios({
             method : 'GET',
-            url : `http://localhost:2020/api/resturantbyid/${resturantId}`,
+            url :`https://backend-this.herokuapp.com/`,
             headers : { 'Content-Type' : 'application/json' },
         }).then(response => this.setState({resturantData : response.data.resturant, resturantId})).catch()
     }
@@ -83,7 +83,7 @@ class Details extends React.Component
         axios(
             {
                 method : 'GET',
-                url:`http://localhost:2020/api/getMenu/${resturantId}`,
+                url:`https://backend-this.herokuapp.com/`,
                 headers:{ 'Content-Type' : 'application/json' }
             }
         ).then(response => {
@@ -181,7 +181,7 @@ class Details extends React.Component
         form.remove()
     }
       getData = (data) => {
-        return fetch(`http://localhost:2020/api/payment`, {
+        return fetch(`https://backend-this.herokuapp.com/`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -198,7 +198,7 @@ class Details extends React.Component
         //  Payment API Call
         this.getData({ amount: subtotal, email: email }).then((response) => {
           var information = {
-            action: "https://securegw-stage.paytm.in/order/process",
+            action:`https://backend-this.herokuapp.com/`,
             params: response,
           };
           this.post(information);
